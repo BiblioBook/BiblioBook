@@ -1,0 +1,16 @@
+// https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4
+
+// @use './scss/base';
+// @import './scss/style.scss';
+
+// customize some Bootstrap variables
+// $primary: base.$primary;
+// $secondary: base.$secondary;
+// $success: base.$success;
+// $danger: base.$danger;
+// $warning: base.$danger;
+// $info: base.$info;
+// $light: base.$light;
+// $dark: base.$dark;
+
+@import '~bootstrap/scss/bootstrap';
