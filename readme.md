@@ -36,7 +36,15 @@ Installez les dépendances front-end à l'aide de Node.js :
 npm install
 ```
 
-### 5- Configurer l'application
+### 5- Surveiller les modifications de fichiers
+
+Executez la commande :
+
+```bash
+npm run watch
+```
+
+### 6- Configurer l'application
 
 Copiez le fichier `.env` en `.env.local` et configurez les variables d'environnement :
 
@@ -51,7 +59,7 @@ Définissez vos variables dans le fichier .env.local:
 - DATABASE_URL
 - MAILER_DSN
 
-## 6- Lancer le serveur
+## 7- Lancer le serveur
 
 Lancez le serveur Symfony :
 
