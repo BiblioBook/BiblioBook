@@ -1,0 +1,20 @@
+<div class="review col rounded">
+    <div class="review__image"><img src="{{ asset(src) }}" alt="Icon d'utilisateur" class="review__img my-3"></div>
+    <div class="review__text">
+        <h3 class="review__text--name mt-2">{{ name }}</h3>
+        <div class="review__text--stars my-1">
+            {% for star in 0.. stars - 1 %}
+                <img src="{{ 'build/images/homepage/star-full-icon.svg' }}" alt="Etoile pleine">
+            {% endfor %}
+            {% if stars != 5 %}
+                {% set missing_stars = 5 - stars %}
+                {% for star in 0.. missing_stars - 1 %}
+                    <img src="{{ 'build/images/homepage/star-empty-icon.svg' }}" alt="Etoile vide">
+                {% endfor %}    
+            {% endif %}
+        </div>
+        <p class="review__text--review mb-3"> 
+            {{ review }}
+        </p>
+    </div>
+</div>
