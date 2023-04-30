@@ -3,6 +3,7 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
+
 {# Section des témoignages de clients #}
     <section id="review">
         <h2 class="section__title">Découvrez les opinions de nos lecteurs passionnés</h2>
@@ -33,4 +34,7 @@
             %}
         </div>
     </section>
+
+{% include '_partials/_newsletter.html.twig' with {'isBlue': true } %}
+
 {% endblock %}
