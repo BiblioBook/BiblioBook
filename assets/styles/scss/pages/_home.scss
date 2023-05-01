@@ -1,0 +1,78 @@
+@import '../abstracts/index';
+@import '../base/index';
+
+#categories {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.categories {
+    width: fit-content;
+    font-family: $ff-secondary;
+
+    &__slide {
+        width: 2rem !important;
+        background-color: black;
+        filter: invert(1);
+        height: 100%;
+        opacity: .5;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &__button {
+        left: 0;
+        height: 90px;
+        width: 210px;
+        border: solid 7px white;
+        box-shadow: $box-shadow-sm;
+
+        &--img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        &--text {
+            top: 0;
+            width: 100%;
+            height: 100%;
+            
+            & p {
+                color: $light;
+                text-shadow: $box-shadow-sm , $box-shadow-sm;
+                font-weight: 700;
+                letter-spacing: .1rem;
+            }
+        }
+    }
+
+}
+
+.toTheLeft {
+    animation: toTheLeft .6s ease-out forwards;
+}
+
+@keyframes toTheLeft {
+    to {
+        left: -226px;
+    }
+}
+.toTheRight {
+    animation: toTheRight .6s ease-out forwards;
+}
+
+@keyframes toTheRight {
+    to {
+        left: 226px;
+    }
+}
+
+.toTheMiddle {
+    animation: toTheMiddle .6s ease-out forwards;
+}
+
+@keyframes toTheMiddle {
+    to {
+        left: 0;
+    }
+}

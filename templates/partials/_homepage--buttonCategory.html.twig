@@ -1,0 +1,8 @@
+<a type="button" href="#" class="categories__button rounded p-0 position-relative" aria-index = {{ key }}>
+    <img src="{{ asset( image )}}" alt="Couverture de livre" class="categories__button--img">
+    <div class="categories__button--text position-absolute d-flex justify-content-center align-items-center">
+        <p>{{ category }}</p>
+    </div>
+</a>
+
+{# href={{ path('app_category', {'search' : category }) }} #}

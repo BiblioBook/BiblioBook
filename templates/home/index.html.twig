@@ -1,20 +1,42 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<section id="categories" class="position-relative">
+    <div class="categories d-flex">
+        <button class="carousel-control-prev categories__slide" type="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" data-slide="prev"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <div class="d-flex gap-3 m-2" id="buttons">
+            {% set images = [
+                '/build/images/homepage/section-header-fantaisie-cat-cover.webp',
+                '/build/images/homepage/section-header-historique-cat-cover.webp',
+                '/build/images/homepage/section-header-romance-cat-cover.webp',
+                '/build/images/homepage/section-header-sf-cat-cover.webp',
+                '/build/images/homepage/section-header-triller-cat-cover.webp'
+            ]
+            %}
+            {% set categories = ['Science fiction', 'Fantaisie', 'Romance', 'Historique', 'Thriller', 'Comédie', 'Littérature'] %}
+            {% set index = 0 %}
+            {% for key, category in categories %}
+                {% if index == images|length - 1 %}
+                    {% set index = 0 %}
+                {% else %}
+                    {% set index = index + 1 %}
+                {% endif %}
+                {% include 'partials/_homepage--buttonCategory.html.twig' with {'key': key , 'image' : images[index], 'category' : category} %}
+            {% endfor %}
+        </div>
+        <button class="carousel-control-next categories__slide" type="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" data-slide="next"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+{% endblock %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/abbai/Documents/_Work_Project/_Projet Interspec/app/BiblioBook/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/abbai/Documents/_Work_Project/_Projet Interspec/app/BiblioBook/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+{% block scripts %}
+<script src="{{ asset('build/js/homepage/script-homepage.js')}}"></script>
 {% endblock %}
