@@ -1,27 +1,27 @@
-<footer>
-    <div class="footer_container">
+<footer class="footer_container">
+    <div class="d-flex col-12 justify-content-around p-4">
         <div>
-            <p>Nous contacter</p>
+            <p class="footer_title col-4 text-center pb-4">Nous contacter</p>
             <ul>
-                <li><img src="{{ asset('build/images/email-icon.svg')}}" alt="email">contact@bibliobook.fr</li>
-                <li><img src="{{ asset('build/images/phone-icon.svg')}}" alt="Phone number">Tel: 01 50 60 33 42</li>
-                <li><img src="{{ asset('build/images/location-icon.svg')}}" alt="Location">Nos locaux</li>
+                <li class="footer_text"><img src="{{ asset('build/images/email-icon.svg')}}" alt="email"> contact@bibliobook.fr</li>
+                <li class="footer_text"><img src="{{ asset('build/images/phone-icon.svg')}}" alt="Phone number"> Tel: 01 50 60 33 42</li>
+                <li class="footer_text"><img src="{{ asset('build/images/location-icon.svg')}}" alt="Location"> Nos locaux</li>
             </ul>
         </div>
         <div>
-            <p>BiblioBook</p>
-            <a href=""><img src="{{ asset('build/images/logo.svg')}}" alt="Logo bibliobook"></a>
+            <p class="footer_title pb-4 text-center">BiblioBook</p>
+            <a href=""><img class="footer_logo" src="{{ asset('build/images/logo.svg')}}" alt="Logo bibliobook"></a>
         </div>
         <div>
-            <p>Rejoignez notre communauté !</p>
+            <p class="footer_title pb-4 text-center">Rejoignez notre communauté !</p>
+            <div class="footer_social-icon d-flex">
             <a href=""><img src="{{ asset('build/images/facebook.svg')}}" alt="Facebook"></a>
             <a href=""><img src="{{ asset('build/images/twitter.svg')}}" alt="Twitter"></a>
             <a href=""><img src="{{ asset('build/images/instagram.svg')}}" alt="Instagram"></a>
+            </div>
         </div>
-        <div>
-        <p>@ Copyright - BiblioBook.fr - Mentions légales</p>
-        </div>
-
     </div>
-
+    <div>
+        <p class="footer_text col-12 text-center p-3">@ Copyright - BiblioBook.fr - Mentions légales</p>
+    </div>
 </footer>

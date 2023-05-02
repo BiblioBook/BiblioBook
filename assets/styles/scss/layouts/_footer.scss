@@ -1,0 +1,29 @@
+@import '../base/index';
+@import '../abstracts/index';
+
+// Footer
+.footer_container {
+  background-color: #303030;
+  font-family: $ff-secondary;
+
+}
+
+.footer_title {
+  color: $primary;
+}
+
+.footer_logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.footer_text {
+  color: $light-grey;
+  font-size: $fs-400;
+}
+
+.footer_social-icon {
+  justify-content: space-around;  
+}
