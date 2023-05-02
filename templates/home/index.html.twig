@@ -8,7 +8,7 @@
     <section id="review">
         <h2 class="section__title">Découvrez les opinions de nos lecteurs passionnés</h2>
         <div class="reviews d-flex col-11 row mx-auto justify-content-center">
-            {% include '_partials/_userReview.html.twig' with 
+            {% include 'partials/_userReview.html.twig' with 
                 {
                     'src' : "build/images/homepage/section-testimonial-user-1.png",
                     'name' : 'Adrien',
@@ -16,7 +16,7 @@
                     'review' : 'Si vous cherchez une bibliothèque à la fois accueillante et avec une grande variété de livres, celle-ci est faite pour vous. Les bénévoles sont très serviables et les étagères sont pleines de trésors.'
                 }
             %}
-            {% include '_partials/_userReview.html.twig' with 
+            {% include 'partials/_userReview.html.twig' with 
                 {
                     'src' : "build/images/homepage/section-testimonial-user-2.png",
                     'name' : 'Sarah',
@@ -24,7 +24,7 @@
                     'review' : "Cette association de prêt de livres est un vrai trésor pour les amateurs de lecture. Le processus d'emprunt est simple et rapide, et les bénévoles sont toujours prêts à recommander un bon livre."
                 }
             %}
-            {% include '_partials/_userReview.html.twig' with 
+            {% include 'partials/_userReview.html.twig' with 
                 {
                     'src' : "build/images/homepage/section-testimonial-user-3.png",
                     'name' : 'Célia',
@@ -35,6 +35,6 @@
         </div>
     </section>
 
-{% include '_partials/_newsletter.html.twig' with {'isBlue': true } %}
+{% include 'partials/_newsletter.html.twig' with {'isBlue': true } %}
 
 {% endblock %}
