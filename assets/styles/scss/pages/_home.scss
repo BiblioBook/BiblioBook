@@ -1,0 +1,29 @@
+@import '../base/index';
+@import '../abstracts/index';
+
+#review {
+    @include section($light-blue);
+}
+.section__title {
+    @include title($blue);
+}
+.reviews {
+    padding: 5.625rem 0;
+    width: fit-content;
+    row-gap: 2rem;
+}
+.review {
+    max-width: 390px;
+    min-width: 312px;
+    margin: 0 clamp(0.2rem, -0.2113rem + 1.8280vw, 2.188rem);
+    background: $light; 
+
+    &__image {
+        background: #F0F9FB;
+        & img {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
