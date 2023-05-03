@@ -5,7 +5,10 @@
     width: 100vw;
     overflow-x: hidden;
 }
-
+#buttons {
+    position: relative;
+    left: 0;
+}
 .categories {
     width: fit-content;
     font-family: $ff-secondary;
@@ -57,16 +60,6 @@
         left: -226px;
     }
 }
-.toTheRight {
-    animation: toTheRight .6s ease-out forwards;
-}
-
-@keyframes toTheRight {
-    to {
-        left: 226px;
-    }
-}
-
 .toTheMiddle {
     animation: toTheMiddle .6s ease-out forwards;
 }
