@@ -6,9 +6,9 @@
 
 {# Section des témoignages de clients #}
     <section id="review">
-        <h2 class="section__title">Découvrez les opinions de nos lecteurs passionnés</h2>
-        <div class="reviews d-flex col-11 row mx-auto justify-content-center">
-            {% include '_partials/_userReview.html.twig' with 
+        <h2 class="section__title--review">Découvrez les opinions de nos lecteurs passionnés</h2>
+        <ul class="reviews d-flex col-11 row mx-auto justify-content-center">
+            {% include 'partials/_userReview.html.twig' with 
                 {
                     'src' : "build/images/homepage/section-testimonial-user-1.png",
                     'name' : 'Adrien',
@@ -16,7 +16,7 @@
                     'review' : 'Si vous cherchez une bibliothèque à la fois accueillante et avec une grande variété de livres, celle-ci est faite pour vous. Les bénévoles sont très serviables et les étagères sont pleines de trésors.'
                 }
             %}
-            {% include '_partials/_userReview.html.twig' with 
+            {% include 'partials/_userReview.html.twig' with 
                 {
                     'src' : "build/images/homepage/section-testimonial-user-2.png",
                     'name' : 'Sarah',
@@ -24,7 +24,7 @@
                     'review' : "Cette association de prêt de livres est un vrai trésor pour les amateurs de lecture. Le processus d'emprunt est simple et rapide, et les bénévoles sont toujours prêts à recommander un bon livre."
                 }
             %}
-            {% include '_partials/_userReview.html.twig' with 
+            {% include 'partials/_userReview.html.twig' with 
                 {
                     'src' : "build/images/homepage/section-testimonial-user-3.png",
                     'name' : 'Célia',
@@ -32,9 +32,25 @@
                     'review' : "J'aime beaucoup cette association de prêt de livres. Ils ont une collection impressionnante de livres et offrent des services de prêt très pratiques. De plus, leurs événements et activités autour de la lecture sont toujours très intéressants."
                 }
             %}
-        </div>
+        </ul>
     </section>
-
-{% include '_partials/_newsletter.html.twig' with {'isBlue': true } %}
+    <section id="favorite">
+        <h2 class="section__title--favorite">Nos coups de coeur</h2>
+        <ul class="favorites d-flex col-11 mx-auto row justify-content-center">
+            {% include  'partials/_favorite-homepage.html.twig' with 
+                {
+                    'number' : 1, 
+                    'src' : 'build/images/homepage/section-favorite-book-1.png',
+                    'title' : 'Cras purus velit',
+                    'synopsis' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis adipiscing....',
+                    'stars' : 4,
+                    'available' : true,
+                    'more_href' : '#',
+                    'review_href': '#',
+                } 
+            %}
+        </ul>
+    </section>
+{% include 'partials/_newsletter.html.twig' with {'isBlue': true } %}
 
 {% endblock %}

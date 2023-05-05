@@ -4,7 +4,7 @@
 #review {
     @include section($light-blue);
 }
-.section__title {
+.section__title--review {
     @include title($blue);
 }
 .reviews {
@@ -26,4 +26,12 @@
             transform: translateX(-50%);
         }
     }
+}
+
+#favorite {
+    @include section($light-orange);
+}
+
+.section__title--favorite {
+    @include title($primary);
 }
