@@ -1,1 +1,117 @@
+@import '../base/index';
+@import '../abstracts/index';
 
+header {
+    @include shadow-sm;
+
+    font-family: $ff-secondary;
+    background-color: $grey;
+    color: $light;
+    height: 85px;
+    width: 100vw;
+}
+.navbar {
+    height: 100%;
+
+    &-nav {
+        background-color: $grey;
+        &::before {
+            content: '';
+            position: relative;
+            background-color: $light;
+            width: 100%;
+            height: 1px;
+            top: 0;
+            left: 0;
+            opacity: 50%;
+        }
+    }
+
+    &-toggler {
+        @include shadow-sm;
+    
+        background: rgba(85, 85, 85, 1);
+        border-color: rgba(85, 85, 85, 1);
+        
+        &-icon {
+            background-image: url(
+    "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='hsl(33, 89%, 53%)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+            }
+    }
+}
+.logo {
+    gap: 1rem;
+    &__container {
+        height: 68px;
+        width: 68px;
+        background-color: $light;
+    }
+    &__titlesContainer {
+        height: fit-content;
+        margin: auto;
+        font-family: $ff-primary;
+
+        &--title {
+            font-size: $fs-800;
+        }
+        &--subtitle {
+            color: $primary;
+            font-size: $fs-600;
+        }
+    }
+    
+}
+.nav {
+    &-link{
+        color: $light;
+
+        & svg path {
+            transition: fill 0.15s ease-in-out;
+        }
+
+        &:focus {
+            color: $pink;
+        }
+        &.active {
+            color: $primary !important;
+            fill: $primary;
+
+            & svg path {
+                fill: $primary;
+            }
+        }
+        &:hover {
+            color: $pink !important;
+            
+            & svg path {
+                fill: $pink;
+            }
+        }
+
+    }
+
+}
+
+.dropdown {
+    &-menu {
+        background: $grey;
+    }
+    &-item {
+        color: $light;
+
+        &:hover {
+            color: $pink;
+            background: $grey;
+        }
+
+        &.active {
+            color: $primary;
+        }
+    } 
+}
+
+@media screen and (min-width:992px) {
+    .navbar-nav::before {
+        display: none;
+    }
+}
