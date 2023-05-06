@@ -8,7 +8,7 @@
     @include title($blue);
 }
 .reviews {
-    padding: 5.625rem 0;
+    @include section-padding;
     width: fit-content;
     row-gap: 2rem;
 }
@@ -30,8 +30,32 @@
 
 #favorite {
     @include section($light-orange);
+    font-family: $ff-secondary;
 }
 
 .section__title--favorite {
     @include title($primary);
+}
+.favorites {
+    @include section-padding;
+    display: grid;
+    grid-template-columns: repeat(3, clamp(20.5rem, 19.896rem + 2.476vw, 22.125rem));
+}
+.favorite__container {
+    margin: 0 clamp(0.2rem, -0.2113rem + 1.828vw, 2.188rem);
+}
+.favorite {
+    background: $light;
+
+    &--number {
+        color: $pink;
+        font-size: $fs-favorites-homepage;
+        font-weight: 800;
+        left: 2%;
+        top: 18px;
+    }
+
+    &--image {
+        z-index: 10;
+    }
 }
