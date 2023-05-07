@@ -3,3 +3,7 @@
 @forward 'components';
 @forward 'layouts';
 @forward 'pages';
+
+* {
+    box-sizing: border-box;
+}
