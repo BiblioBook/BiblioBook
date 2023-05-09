@@ -70,7 +70,7 @@ header {
         }
 
         &:focus {
-            color: $pink;
+            color: $light;
         }
         &.active {
             color: $primary !important;
@@ -81,10 +81,10 @@ header {
             }
         }
         &:hover {
-            color: $pink !important;
+            color: $primary !important;
             
             & svg path {
-                fill: $pink;
+                fill: $primary;
             }
         }
 
@@ -100,7 +100,7 @@ header {
         color: $light;
 
         &:hover {
-            color: $pink;
+            color: $primary;
             background: $grey;
         }
 

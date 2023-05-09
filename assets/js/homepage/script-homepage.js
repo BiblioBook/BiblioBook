@@ -3,8 +3,9 @@ const categoriesCarousel = document.querySelector('#buttons');
 categoriesCarousel.children[0].classList.add('active');
 
 function animateSlide(direction) {
-    const active = document.querySelector(".active");
+    const active = document.querySelector(".categories__button.active");
     let newActive;
+
     if (direction === "next") {
         newActive = active.nextElementSibling;
     } else {
@@ -22,26 +23,34 @@ function animateSlide(direction) {
 
         categoriesCarousel.appendChild(a_active);
     } else if (direction === "previous") {
-        a_active = newActive.cloneNode(true);
+        // a_active = newActive.cloneNode(true);
 
-        categoriesCarousel.insertBefore(a_active, categoriesCarousel.children[0]);
-        categoriesCarousel.style.left = '-226px';
+        // categoriesCarousel.insertBefore(a_active, categoriesCarousel.children[0]);
+        // categoriesCarousel.style.left = '-226px';
     }
 
     if (direction === "next") {
-        categoriesCarousel.classList.add('toTheLeft');
+        const buttons = categoriesCarousel.children;
+        for (let button of buttons) {
+            button.classList.add('toTheLeft');
+            active.remove();
+            setTimeout(() => {
+                button.classList.remove("toTheLeft");
+            }, 600);
+        }
+        
     } else {
-        categoriesCarousel.classList.add('toTheMiddle');
+        // categoriesCarousel.classList.add('toTheMiddle');
     }
 
     setTimeout(() => {
         if (direction === "next") {
-            categoriesCarousel.classList.remove('toTheLeft');
-            active.remove();
+            // categoriesCarousel.classList.remove('toTheLeft');
+            // active.remove();
         } else {
-            categoriesCarousel.classList.remove('toTheMiddle');
-            categoriesCarousel.children[categoriesCarousel.children.length - 1].remove();
-            categoriesCarousel.style.left = "0";
+            // categoriesCarousel.classList.remove('toTheMiddle');
+            // categoriesCarousel.children[categoriesCarousel.children.length - 1].remove();
+            // categoriesCarousel.style.left = "0";
         }
 
     },600)
