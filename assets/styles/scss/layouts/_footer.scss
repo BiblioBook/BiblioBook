@@ -2,7 +2,8 @@
 @import '../abstracts/index';
 
 // Footer
-.footer_container {
+
+.footer {
   background-color: #303030;
   font-family: $ff-secondary;
 
@@ -12,10 +13,13 @@
   color: $primary;
 }
 
-.footer_logo {
+.footer_contact {
+  margin-left: 15rem;
+}
+
+.footer_container {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
   background-color: white;
 }
 
@@ -25,5 +29,48 @@
 }
 
 .footer_social-icon {
-  justify-content: space-around;  
+  justify-content: space-around;
+  // background-color: white;
+  // border-radius: 50%;
+  // width: 60px;
+  // height: 60px;
+  
 }
+
+.facebook {
+  border: 8px solid white;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.twitter {
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border: 5px solid;
+  border-radius: 50%;
+}
+
+.instagram {
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border: 5px solid;
+  border-radius: 50%;
+}
+
+.arrow {
+  width: 54px;
+  height: 54px;
+  background-color: #F2921D;
+  margin-top: -60px;
+}
+
+// .test {
+//   width: 100px;
+//   height: 100px;
+//   background-image: url("{{asset('build/images/logo.svg')}}");
+//   background-size: cover;
+//   background-position: center;
+//   border-radius: 10px;
+// }
