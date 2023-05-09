@@ -36,12 +36,12 @@
 
 
 .arrow_container {
-  left: calc(100% - 3rem);
-  width: fit-content;
+  right: 3rem;
+  width: auto !important;
   &--arrow {
     width: 54px;
     height: 54px;
     background-color: #F2921D;
-    margin-top: -60px;
+    transform: translateY(-50%);
   }
 }
