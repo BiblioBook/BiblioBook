@@ -35,9 +35,13 @@
 }
 
 
-.arrow {
-  width: 54px;
-  height: 54px;
-  background-color: #F2921D;
-  margin-top: -60px;
+.arrow_container {
+  left: calc(100% - 3rem);
+  width: fit-content;
+  &--arrow {
+    width: 54px;
+    height: 54px;
+    background-color: #F2921D;
+    margin-top: -60px;
+  }
 }

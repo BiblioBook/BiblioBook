@@ -1,12 +1,12 @@
-<footer class="footer container-fluid">
-    <div class="d-flex col-md-12 justify-content-around p-4">
-        <div class="col-md-4 text-center order-md-2">
+<footer class="footer container-fluid position-relative">
+    <div class="d-flex row col-md-12 justify-content-around p-4 gap-5 gap-md-0">
+        <div class="col-6 col-md-4 text-center order-md-2">
             <p class="footer_title pb-4">BiblioBook</p>
             <div class="footer_container d-flex rounded-circle m-auto">
                 <a href="" class="m-auto"><img class="footer_container--logo img-fluid" src="{{ asset('build/images/logo.svg')}}" alt="Logo bibliobook"></a>
             </div>
         </div>
-        <div class="col-md-4 order-md-1">
+        <div class="col-6 col-md-4 order-md-1">
             <p class="footer_title text-center pb-4">Nous contacter</p>
             <ul class="footer_contact m-auto justify-content-center">
                 <li class="footer_text pb-3"><img src="{{ asset('build/images/email-icon.svg')}}" alt="email"> contact@bibliobook.fr</li>
@@ -14,7 +14,7 @@
                 <li class="footer_text"><img src="{{ asset('build/images/location-icon.svg')}}" alt="Location"> Nos locaux</li>
             </ul>
         </div>
-        <div class="col-md-4 text-center order-md-3">
+        <div class="col-6 col-md-4 text-center order-md-3">
             <p class="footer_title pb-4">Rejoignez notre communauté !</p>
             <div class="d-flex justify-content-center">
                 <div class="social_media--container d-flex rounded-circle m-auto">
@@ -28,11 +28,11 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-end">
-        <a href=""><img class="arrow img-fluid rounded p-2" src="{{ asset('build/images/arrow-up.svg')}}" alt="arrow-up"></a>
+        <div class="arrow_container position-absolute top-0">
+            <a href=""><img class="arrow_container--arrow img-fluid rounded p-2" src="{{ asset('build/images/arrow-up.svg')}}" alt="arrow-up"></a>
         </div>
     </div>
     <div>
-        <p class="footer_text col-md-12 text-center p-3">@ Copyright - BiblioBook.fr - Mentions légales</p>
+        <p class="footer_text col-6 col-md-12 text-center p-3 m-auto">@ Copyright - BiblioBook.fr - Mentions légales</p>
     </div>
 </footer>
