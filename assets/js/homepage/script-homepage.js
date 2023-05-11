@@ -20,40 +20,52 @@ function animateSlide(direction) {
     let a_active;
     if (direction === "next") {
         a_active = active.cloneNode(true);
-
         categoriesCarousel.appendChild(a_active);
     } else if (direction === "previous") {
-        // a_active = newActive.cloneNode(true);
-
-        // categoriesCarousel.insertBefore(a_active, categoriesCarousel.children[0]);
-        // categoriesCarousel.style.left = '-226px';
+        a_active = newActive.cloneNode(true);
+        a_active.classList.replace('position-relative', 'position-absolute');
+        a_active.style.left = '-226px';
+        categoriesCarousel.insertBefore(a_active, categoriesCarousel.children[0]);
     }
+    const buttons = categoriesCarousel.children;
 
     if (direction === "next") {
-        const buttons = categoriesCarousel.children;
-        for (let button of buttons) {
+        for (let button of buttons) {   
             button.classList.add('toTheLeft');
-            active.remove();
             setTimeout(() => {
-                button.classList.remove("toTheLeft");
-            }, 600);
+                if (button !== categoriesCarousel.children[0]) {
+                    button.classList.remove('toTheLeft');
+                }
+            }, 650)
         }
         
     } else {
-        // categoriesCarousel.classList.add('toTheMiddle');
+        for (let button of buttons) {
+            if (button == a_active) {
+                a_active.classList.add("toTheMiddle");
+            } else {
+                button.classList.add('toTheRight')
+            }
+        }
     }
-
+    
     setTimeout(() => {
         if (direction === "next") {
-            // categoriesCarousel.classList.remove('toTheLeft');
-            // active.remove();
+            active.remove();
         } else {
-            // categoriesCarousel.classList.remove('toTheMiddle');
-            // categoriesCarousel.children[categoriesCarousel.children.length - 1].remove();
-            // categoriesCarousel.style.left = "0";
+            for (let button of buttons) {
+                if (button == a_active) {
+                    a_active.classList.replace('position-absolute', 'position-relative');
+                    a_active.classList.remove('toTheMiddle');
+                } else {
+                    button.classList.remove('toTheRight');
+                }
+            }
+            categoriesCarousel.children[categoriesCarousel.children.length - 1].remove();
+            a_active.style.left = "0";
         }
 
-    },600)
+    },650)
 }
 
 let interval = setInterval(() => {
@@ -66,6 +78,11 @@ slideButtons.forEach((button => {
     button.addEventListener("click", e => {
 
         if (e.target.dataset.slide === "prev") {
+            button.disabled = true;
+            setTimeout(() => {
+                button.disabled = false;
+            }, 650);
+
             animateSlide("next");
             clearInterval(interval);
 
@@ -74,6 +91,11 @@ slideButtons.forEach((button => {
             }, 3500)
             
         } else if (e.target.dataset.slide === "next") {
+            button.disabled = true;
+            setTimeout(() => {
+                button.disabled = false;
+            }, 650);
+            
             animateSlide("previous");
             clearInterval(interval);
             

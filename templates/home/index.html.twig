@@ -5,34 +5,36 @@
 {% block body %}
 <section id="categories" class="position-relative">
     <div class="categories d-flex mx-auto">
-        <button class="carousel-control-prev categories__slide" type="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true" data-slide="prev"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <div class="d-flex gap-3 m-2 position-relative" id="buttons">
-            {% set images = [
-                '/build/images/homepage/section-header-fantaisie-cat-cover.webp',
-                '/build/images/homepage/section-header-historique-cat-cover.webp',
-                '/build/images/homepage/section-header-romance-cat-cover.webp',
-                '/build/images/homepage/section-header-sf-cat-cover.webp',
-                '/build/images/homepage/section-header-triller-cat-cover.webp'
-            ]
-            %}
-            {% set categories = ['Science fiction', 'Fantaisie', 'Romance', 'Historique', 'Thriller', 'Comédie', 'Littérature'] %}
-            {% set index = 0 %}
-            {% for key, category in categories %}
-                {% if index == images|length - 1 %}
-                    {% set index = 0 %}
-                {% else %}
-                    {% set index = index + 1 %}
-                {% endif %}
-                {% include 'partials/_homepage--buttonCategory.html.twig' with {'key': key , 'image' : images[index], 'category' : category} %}
-            {% endfor %}
+        <div class="buttons__container position-relative">
+            <button class="carousel-control-prev categories__slide" type="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true" data-slide="prev"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <div class="d-flex flex-nowrap gap-3 m-2 position-relative" id="buttons">
+                {% set images = [
+                    '/build/images/homepage/section-header-fantaisie-cat-cover.webp',
+                    '/build/images/homepage/section-header-historique-cat-cover.webp',
+                    '/build/images/homepage/section-header-romance-cat-cover.webp',
+                    '/build/images/homepage/section-header-sf-cat-cover.webp',
+                    '/build/images/homepage/section-header-triller-cat-cover.webp'
+                ]
+                %}
+                {% set categories = ['Science fiction', 'Fantaisie', 'Romance', 'Historique', 'Thriller', 'Comédie', 'Littérature'] %}
+                {% set index = 0 %}
+                {% for key, category in categories %}
+                    {% if index == images|length - 1 %}
+                        {% set index = 0 %}
+                    {% else %}
+                        {% set index = index + 1 %}
+                    {% endif %}
+                    {% include 'partials/_homepage--buttonCategory.html.twig' with {'key': key , 'image' : images[index], 'category' : category} %}
+                {% endfor %}
+            </div>
+            <button class="carousel-control-next categories__slide" type="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true" data-slide="next"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-next categories__slide" type="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true" data-slide="next"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 </section>
 
@@ -40,7 +42,7 @@
     <section id="review">
         <h2 class="section__title">Découvrez les opinions de nos lecteurs passionnés</h2>
         <div class="reviews d-flex col-11 row mx-auto justify-content-center">
-            {% include '_partials/_userReview.html.twig' with 
+            {% include 'partials/_userReview.html.twig' with 
                 {
                     'src' : "build/images/homepage/section-testimonial-user-1.png",
                     'name' : 'Adrien',
@@ -48,7 +50,7 @@
                     'review' : 'Si vous cherchez une bibliothèque à la fois accueillante et avec une grande variété de livres, celle-ci est faite pour vous. Les bénévoles sont très serviables et les étagères sont pleines de trésors.'
                 }
             %}
-            {% include '_partials/_userReview.html.twig' with 
+            {% include 'partials/_userReview.html.twig' with 
                 {
                     'src' : "build/images/homepage/section-testimonial-user-2.png",
                     'name' : 'Sarah',
@@ -56,7 +58,7 @@
                     'review' : "Cette association de prêt de livres est un vrai trésor pour les amateurs de lecture. Le processus d'emprunt est simple et rapide, et les bénévoles sont toujours prêts à recommander un bon livre."
                 }
             %}
-            {% include '_partials/_userReview.html.twig' with 
+            {% include 'partials/_userReview.html.twig' with 
                 {
                     'src' : "build/images/homepage/section-testimonial-user-3.png",
                     'name' : 'Célia',
@@ -67,7 +69,7 @@
         </div>
     </section>
 
-{% include '_partials/_newsletter.html.twig' with {'isBlue': true } %}
+{% include 'partials/_newsletter.html.twig' with {'isBlue': true } %}
 
 {% endblock %}
 

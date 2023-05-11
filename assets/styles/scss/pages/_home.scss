@@ -5,10 +5,11 @@
     width: 100vw;
     overflow-x: hidden;
 }
-#buttons {
-    position: relative;
-    left: 0;
+.buttons__container {
+    max-width: 1440px;
+    overflow: hidden;
 }
+
 .categories {
     width: fit-content;
     font-family: $ff-secondary;
@@ -23,6 +24,7 @@
         transform: translateY(-50%);
     }
     &__button {
+        flex: 0 0 auto;
         left: 0;
         height: 90px;
         width: 210px;
@@ -67,6 +69,14 @@
 @keyframes toTheMiddle {
     to {
         left: 0;
+    }
+}
+.toTheRight {
+    animation: toTheRight .6s ease-out forwards;
+}
+@keyframes toTheRight {
+    to {
+        left: 226px;
     }
 }
 
