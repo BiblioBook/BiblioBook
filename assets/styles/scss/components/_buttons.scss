@@ -2,7 +2,6 @@
 @import '../abstracts/index';
 
 .barrow_button {
-    border-radius: 6px;
     background-color: $primary;
     color: $light;
     width: 157px;
@@ -13,6 +12,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    text-align: center;
     transition: .2s linear;
 
     &:hover {

@@ -45,6 +45,7 @@
 }
 .favorite__container {
     margin: 0 1rem;
+    
 }
 .favorite {
     background: $light;
@@ -59,5 +60,10 @@
 
     &--image {
         z-index: 10;
+    }
+
+    &:hover > .card-book__hover {
+        visibility: visible;
+        opacity: 1;
     }
 }

@@ -1,0 +1,57 @@
+@import '../base/index';
+@import '../abstracts/index';
+
+.card-book__hover {
+    font-family: $ff-secondary;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    background: $light-dark;
+    color: $light;
+    height: 85%;
+    width: 85%;
+    font-size: $fs-500;
+    transition: all .2s linear;
+
+    &--title {
+        color: $primary;
+        font-size: $fs-500;
+    }
+
+    &--description {
+        max-height: 72px;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+            // Javascript
+            content: "...";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    &--links-container {
+        align-self: end;
+    }
+
+    &--link {
+        width: 100px;
+        height: 28px;
+        font-size: $fs-400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $light-orange;
+        color: black;
+        box-shadow: $shadow-sm;
+        text-decoration: none;
+        transition: .1s linear;
+
+    }
+    &--link[type="button"]:hover {
+        color: $dark;
+        // background-color: $light-pink;
+        transform: scale(1.05);
+    }
+}
