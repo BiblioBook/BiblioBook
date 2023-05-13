@@ -1,0 +1,23 @@
+@import '../base/index';
+@import '../abstracts/index';
+
+.barrow_button {
+    border-radius: 6px;
+    background-color: $primary;
+    color: $light;
+    width: 157px;
+    height: 54px;
+    box-shadow: $shadow-sm;
+    margin: 1.125rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: .2s linear;
+
+    &:hover {
+        background-color: $pink;
+        color: $light;
+        transform: scale(1.02);
+    }
+}

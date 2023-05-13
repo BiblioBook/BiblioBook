@@ -38,11 +38,13 @@
 }
 .favorites {
     @include section-padding;
+    row-gap: 1.25rem;
     display: grid;
     grid-template-columns: repeat(3, clamp(20.5rem, 19.896rem + 2.476vw, 22.125rem));
+    max-width: 1380px;
 }
 .favorite__container {
-    margin: 0 clamp(0.2rem, -0.2113rem + 1.828vw, 2.188rem);
+    margin: 0 1rem;
 }
 .favorite {
     background: $light;
@@ -51,7 +53,7 @@
         color: $pink;
         font-size: $fs-favorites-homepage;
         font-weight: 800;
-        left: 2%;
+        left: 0;
         top: 18px;
     }
 
