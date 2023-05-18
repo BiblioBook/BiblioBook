@@ -22,14 +22,6 @@
         max-height: 72px;
         overflow: hidden;
         position: relative;
-
-        &::after {
-            // Javascript
-            content: "...";
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
     }
     &--links-container {
         align-self: end;
@@ -50,8 +42,8 @@
 
     }
     &--link[type="button"]:hover {
-        color: $dark;
-        // background-color: $light-pink;
-        transform: scale(1.05);
+        color: $light;
+        background-color: $light-pink;
+        // transform: scale(1.05);
     }
 }

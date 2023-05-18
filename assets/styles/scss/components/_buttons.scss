@@ -20,4 +20,10 @@
         color: $light;
         transform: scale(1.02);
     }
+    &--animated {
+        opacity: 0;
+        visibility: hidden;
+        left: 100%;
+        position: relative;
+    }
 }

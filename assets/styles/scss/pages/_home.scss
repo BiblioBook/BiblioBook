@@ -48,22 +48,44 @@
     
 }
 .favorite {
+    position: relative;
+    left: 100%;
+    opacity: 0;
+    visibility: hidden;
     background: $light;
 
     &--number {
+        opacity: 0;
+        z-index: 5;
+        visibility: hidden;
         color: $pink;
         font-size: $fs-favorites-homepage;
         font-weight: 800;
-        left: 0;
         top: 18px;
+        left: 100%;
     }
 
     &--image {
         z-index: 10;
+        position: relative;
+        opacity: 0;
+        visibility: hidden;
+        left: 100%;
     }
 
     &:hover > .card-book__hover {
         visibility: visible;
         opacity: 1;
+    }
+}
+
+.favorite-fromRight {
+    animation: favoriteFromRight .6s ease-out forwards;
+}
+@keyframes favoriteFromRight {
+    to {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
     }
 }

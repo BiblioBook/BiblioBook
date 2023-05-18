@@ -117,3 +117,7 @@
 {% include 'partials/_newsletter.html.twig' with {'isBlue': true } %}
 
 {% endblock %}
+
+{% block scripts %}
+<script src="{{ asset('build/js/homepage/script-homepage.js')}}"></script>
+{% endblock %}
