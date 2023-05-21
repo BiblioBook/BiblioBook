@@ -1,6 +1,70 @@
 @import '../base/index';
 @import '../abstracts/index';
 
+// START Section Slide 
+.slide_section {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .slide_container {
+    &--img {
+      background-repeat: no-repeat;
+    }
+  
+    &--title {
+      font-family: $ff-primary;
+      font-size: 40px;
+      color: $dark-grey;
+      max-width: 488px;
+      left: 10%;
+      right: 50%;
+      bottom: 66%;
+    }
+
+    &--text {
+      color: $dark-grey;
+      font-family: $ff-secondary;
+      font-size: $fs-900;
+      left: 10%;
+      right: 50%;
+      bottom: 50%;
+
+    }
+
+    }
+
+    .btn_container{
+      width: 331px;
+      height: 60px; 
+      left: 10%;
+      right: 50%;
+      bottom: 30%;
+      
+      
+      &--btn {
+        width: 331px;
+        height: 60px; 
+        background-color: $primary;
+        color: $white;
+        font-family: $ff-secondary;
+        font-size: $fs-900;
+        &:hover{
+          color: $pink;
+        }
+      }
+    }
+
+    .gradient {
+      background: linear-gradient(180deg, rgba(206, 194, 199, 0) 28.21%, #FFFFFF 100%);
+      bottom: -20%;
+      width: 100%;
+      height: 306px;
+
+    }
+
+// END SECTION SLIDE
+
 #review {
     @include section($light-blue);
 }

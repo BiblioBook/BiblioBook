@@ -26,6 +26,9 @@
 .footer_text {
   color: $light-grey;
   font-size: $fs-400;
+  &:hover{
+    color: $primary;
+  }
 }
 
 .social_media--container {
@@ -38,6 +41,9 @@
 .arrow_container {
   right: 3rem;
   width: auto !important;
+  &:hover {
+    color: $pink;
+  }
   &--arrow {
     width: 54px;
     height: 54px;
