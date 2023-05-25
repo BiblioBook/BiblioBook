@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Baskervville';
+    src: url('../../fonts/Baskervville-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../../fonts/Nunito-Regular.ttf') format('truetype');
+}
+
+$ff-primary: 'Baskervville', courier;
+$ff-secondary: 'Nunito', sans-serif;
+
+$fs-400 : .875rem; // 14px
+$fs-500 : 1rem; // 16px
+$fs-600: 1.125rem; // 18px
+$fs-700: 1.25rem; // 20px
+$fs-800: 1.375rem; // 22px
+$fs-900 : 1.5rem; // 24px 
