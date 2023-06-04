@@ -1,8 +1,8 @@
+@import '../base/index';
+
 @mixin shadow-sm {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
-@import '../base/index';
 
 @mixin title($color) {
     font-family: $ff-primary;
@@ -18,7 +18,15 @@
 }
 
 @mixin section($color) {
+    overflow-x: hidden;
     background: $color;
     max-width: 100vw;
 }
 
+@mixin section-padding {
+    padding: 5.625rem 0;
+}
+@mixin button-size {
+    width: 157px;
+    height: 58px;    
+}

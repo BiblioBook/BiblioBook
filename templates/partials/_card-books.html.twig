@@ -1,0 +1,43 @@
+<li  class="book__container row">
+    <div class="book py-4 d-flex justify-content-center align-items-center position-relative rounded">
+        <img src="{{ asset(src)}}" alt="Couverture du livre" class="book--image">
+        <div class="card-book__hover position-absolute rounded m-auto p-3 d-grid">
+            <h3 class="card-book__hover--title">{{ title }}</h3>
+            <div class="my-2">
+                <h4 class="card-book__hover--title mb-1">Synopsis</h4>
+                <div class="card-book__hover--description">
+                    <p>{{ synopsis }}</p>
+                </div>
+            </div>
+            <div class="card-book__hover--links-container">
+                <div class="col d-flex justify-content-between">
+                    <div class="stars">
+                        {% for star in 0.. stars - 1 %}
+                        <img src="{{ 'build/images/homepage/star-full-icon.svg' }}" alt="Etoile pleine">
+                    {% endfor %}
+                    {% if stars != 5 %}
+                        {% set missing_stars = 5 - stars %}
+                        {% for star in 0.. missing_stars - 1 %}
+                            <img src="{{ 'build/images/homepage/star-empty-icon.svg' }}" alt="Etoile vide">
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+                    <div class="card-book__hover--link rounded">{{ available ? 'Disponible' : 'Rupture' }}</div>
+                </div>
+                <div class="col d-flex justify-content-between mt-3">
+                    <a type="button" class="card-book__hover--link rounded" href={{ more_href }}>
+                        Avis
+                    </a>
+                    <a type="button" class="card-book__hover--link rounded" href={{ review_href }}>
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if available %}
+        <a href="#" type="button" class="barrow_button rounded">Emprunter</a>
+    {% else %}
+        <a href="#" type="button" class="barrow_button rounded">Ajouter à la liste de souhaits</a>
+    {% endif %}
+</li>  

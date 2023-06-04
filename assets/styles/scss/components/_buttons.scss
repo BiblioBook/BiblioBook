@@ -1,0 +1,44 @@
+@import '../base/index';
+@import '../abstracts/index';
+
+.barrow_button {
+    @include button-size;
+    background-color: $primary;
+    color: $light;
+    box-shadow: $shadow-sm;
+    margin: 1.125rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    transition: .2s linear;
+
+    &:hover {
+        background-color: $pink;
+        color: $light;
+        transform: scale(1.02);
+    }
+    &--animated {
+        opacity: 0;
+        visibility: hidden;
+        left: 100%;
+        position: relative;
+    }
+}
+
+.see-more__button {
+    @include button-size;
+    color: $primary;
+    border: 3px $primary solid;
+    transition: .2s linear;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3.625rem;
+    font-weight: 600;
+    
+    &:hover {
+        background-color: $primary;
+        color: $light;
+    }
+}

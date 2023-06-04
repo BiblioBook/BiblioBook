@@ -1,0 +1,79 @@
+@import '../base/index';
+@import '../abstracts/index';
+
+
+.books__container {
+
+    @include section-padding;
+
+    &--books {
+        row-gap: 1.25rem;
+        display: grid;
+        grid-template-columns: repeat(3, clamp(20.5rem, 19.896rem + 2.476vw, 22.125rem));
+        max-width: 1380px;
+    }
+}
+
+
+.book__container {
+    margin: 0 1rem;
+}
+.book {
+    background: $light;
+
+    &--image {
+        z-index: 10;
+    }
+
+    &:hover > .card-book__hover {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.card-book__hover {
+    font-family: $ff-secondary;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    background: $light-dark;
+    color: $light;
+    height: 85%;
+    width: 85%;
+    font-size: $fs-500;
+    transition: all .2s linear;
+
+    &--title {
+        color: $primary;
+        font-size: $fs-500;
+    }
+
+    &--description {
+        max-height: 72px;
+        overflow: hidden;
+        position: relative;
+    }
+    &--links-container {
+        align-self: end;
+    }
+
+    &--link {
+        width: 100px;
+        height: 28px;
+        font-size: $fs-400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $light-orange;
+        color: black;
+        box-shadow: $shadow-sm;
+        text-decoration: none;
+        transition: .2s linear;
+
+    }
+    &--link[type="button"]:hover {
+        color: $light;
+        background-color: $primary;
+        // transform: scale(1.05);
+    }
+}

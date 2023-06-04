@@ -1,9 +1,0 @@
-@import '../base/index';
-
-@function isItBlueTitle($blue) {
-    @if $blue == true {
-        @return $blue;
-    } @else {
-        @return $primary;
-    }
-}

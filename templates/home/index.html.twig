@@ -6,8 +6,8 @@
 
 {# Section des témoignages de clients #}
     <section id="review">
-        <h2 class="section__title">Découvrez les opinions de nos lecteurs passionnés</h2>
-        <div class="reviews d-flex col-11 row mx-auto justify-content-center">
+        <h2 class="section__title--review">Découvrez les opinions de nos lecteurs passionnés</h2>
+        <ul class="reviews d-flex col-11 row mx-auto justify-content-center">
             {% include 'partials/_userReview.html.twig' with 
                 {
                     'src' : "build/images/homepage/section-testimonial-user-1.png",
@@ -32,9 +32,90 @@
                     'review' : "J'aime beaucoup cette association de prêt de livres. Ils ont une collection impressionnante de livres et offrent des services de prêt très pratiques. De plus, leurs événements et activités autour de la lecture sont toujours très intéressants."
                 }
             %}
-        </div>
+        </ul>
     </section>
-
+    
+    <section id="favorite">
+        <h2 class="section__title--favorite">Nos coups de coeur</h2>
+        <ul class="favorites mx-auto justify-content-between">
+            {% include  'partials/_favorite-homepage.html.twig' with 
+                {
+                    'number' : 1, 
+                    'src' : 'build/images/homepage/section-favorites-book-1.png',
+                    'title' : 'Cras purus velit',
+                    'synopsis' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis adipiscing Lorem ipsumd dolor sit amet, consectetur adipiscing elit. Nam iaculis adipiscing....',
+                    'stars' : 5,
+                    'available' : false,
+                    'more_href' : '#',
+                    'review_href': '#',
+                } 
+            %}
+            {% include  'partials/_favorite-homepage.html.twig' with 
+                {
+                    'number' : 2, 
+                    'src' : 'build/images/homepage/section-favorites-book-2.png',
+                    'title' : 'Cras purus velit',
+                    'synopsis' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis adipiscing....',
+                    'stars' : 5,
+                    'available' : false,
+                    'more_href' : '#',
+                    'review_href': '#',
+                } 
+            %}
+            {% include  'partials/_favorite-homepage.html.twig' with 
+                {
+                    'number' : 3, 
+                    'src' : 'build/images/homepage/section-favorites-book-3.png',
+                    'title' : 'Cras purus velit',
+                    'synopsis' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis adipiscing....',
+                    'stars' : 4,
+                    'available' : true,
+                    'more_href' : '#',
+                    'review_href': '#',
+                } 
+            %}
+            {% include  'partials/_favorite-homepage.html.twig' with 
+                {
+                    'number' : 4, 
+                    'src' : 'build/images/homepage/section-favorites-book-4.png',
+                    'title' : 'Cras purus velit',
+                    'synopsis' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis adipiscing....',
+                    'stars' : 4,
+                    'available' : true,
+                    'more_href' : '#',
+                    'review_href': '#',
+                } 
+            %}
+            {% include  'partials/_favorite-homepage.html.twig' with 
+                {
+                    'number' : 5, 
+                    'src' : 'build/images/homepage/section-favorites-book-5.png',
+                    'title' : 'Cras purus velit',
+                    'synopsis' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis adipiscing....',
+                    'stars' : 4,
+                    'available' : true,
+                    'more_href' : '#',
+                    'review_href': '#',
+                } 
+            %}
+            {% include  'partials/_favorite-homepage.html.twig' with 
+                {
+                    'number' : 6, 
+                    'src' : 'build/images/homepage/section-favorites-book-6.png',
+                    'title' : 'Cras purus velit',
+                    'synopsis' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam iaculis adipiscing....',
+                    'stars' : 4,
+                    'available' : true,
+                    'more_href' : '#',
+                    'review_href': '#',
+                } 
+            %}
+        </ul>
+    </section>
 {% include 'partials/_newsletter.html.twig' with {'isBlue': true } %}
 
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ asset('build/js/homepage/script-homepage.js')}}"></script>
 {% endblock %}
