@@ -18,10 +18,15 @@
 }
 
 @mixin section($color) {
+    overflow-x: hidden;
     background: $color;
     max-width: 100vw;
 }
 
 @mixin section-padding {
     padding: 5.625rem 0;
+}
+@mixin button-size {
+    width: 157px;
+    height: 58px;    
 }

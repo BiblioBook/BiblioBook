@@ -2,10 +2,9 @@
 @import '../abstracts/index';
 
 .barrow_button {
+    @include button-size;
     background-color: $primary;
     color: $light;
-    width: 157px;
-    height: 54px;
     box-shadow: $shadow-sm;
     margin: 1.125rem auto;
     display: flex;
@@ -25,5 +24,21 @@
         visibility: hidden;
         left: 100%;
         position: relative;
+    }
+}
+
+.see-more__button {
+    @include button-size;
+    color: $primary;
+    border: 3px $primary solid;
+    transition: .2s linear;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3.625rem;
+    font-weight: 600;
+    
+    &:hover {
+        background-color: $primary;
+        color: $light;
     }
 }

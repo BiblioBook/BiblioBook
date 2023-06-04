@@ -1,0 +1,9 @@
+@import '../base/index';
+@import '../abstracts/index';
+
+#top-rated {
+    @include section($light-blue);
+}
+.section__title--top-rated {
+    @include title($blue);
+}
